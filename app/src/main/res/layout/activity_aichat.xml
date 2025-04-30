@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Chat Header -->
+    <LinearLayout
+        android:id="@+id/chat_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/iconbotai" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI BOT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <!-- RecyclerView untuk chat -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/chatInputLayout"
+        android:layout_below="@id/chat_header"
+        android:padding="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:background="@android:color/white" />
+
+    <!-- Input Chat -->
+    <LinearLayout
+        android:id="@+id/chatInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:background="#ffffff"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- EditText untuk mengetik pesan -->
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/search_background"
+            android:hint="Ketik pesan..."
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- Tombol Kirim -->
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kirim"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#D7DCF7"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/iconlibrary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="library"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/icondiscover" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Discover"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/iconai" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ai chat"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/iconflame" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hotnews"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/iconprofile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Profile"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
